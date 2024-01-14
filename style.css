@@ -2,8 +2,12 @@
 body {
   font-family: "Poppins";
   background: #242424;
+  color: white;
 }
 h1 {
+  font-size: 1000px;
+   text-shadow: 0 0 30px black;
+  color: white;
   text-align: center;
 }
 .button1 {
@@ -25,6 +29,28 @@ h1 {
 }
 
 .button1:hover {
+  background-color: #f25757;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0px 15px 20px rgba(242, 87, 87, 0.2);
+}
+a {
+  font-family: 'Poppins', sans-serif;
+  color: #d4cfcf;
+  font-size: 20px;
+  text-decoration: none;
+}
+a.intro {
+  background-color: #454eb5;
+  background-position: 10px;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  color: #d4cfcf;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 1s;
+}
+a.intro:hover {
   background-color: #f25757;
   cursor: pointer;
   color: white;
