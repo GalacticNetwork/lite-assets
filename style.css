@@ -3,10 +3,11 @@ body {
   font-family: "Poppins";
   background: #242424;
   color: white;
+  text-shadow: 0 0 30px black;
 }
 h1 {
-  font-size: 1000px;
-   text-shadow: 0 0 30px black;
+  font-size: 30px;
+  text-shadow: 0 0 30px black;
   color: white;
   text-align: center;
 }
@@ -39,6 +40,7 @@ a {
   color: #d4cfcf;
   font-size: 20px;
   text-decoration: none;
+  text-shadow: 0 0 30px white;
 }
 a.intro {
   background-color: #454eb5;
