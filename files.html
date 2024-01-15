@@ -4,14 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jordansmathwork | Lite</title>
-  <link rel="stylesheet" type="text/css" href="/style.css" />
+ <link rel="stylesheet" type="text/css" href="/style.css" />
 </head>
 <body>
+  <header>
+    <a href="/">Home</a>
+    <br>
+  </header>
   <div align="center">
   <h1>Lite Files</h1>
-    <h2>ctrl + f to search</h2>
+    <div class="box">
+    <input type="text" id="gsearchbar" onkeyup="document.querySelectorAll('#glist>a').forEach(l=>l.style.display=l.textContent.toUpperCase().includes(this.value.toUpperCase().replace(/ /g,''))?'block':'none')" autocomplete="off" spellcheck="false" placeholder="Search" />
+    <div id="glist">
+    <a href="chat.html">Chat Section</a>
   <a href="gfiles/1v1.lol">1v1.lol</a>
   </div>
+    </div>
 </body>
 </html>
