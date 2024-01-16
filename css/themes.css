@@ -2,6 +2,10 @@ body[theme="classic"] {
   --bgcolor: #242424;
   --txtcolor: white;
 }
+body[theme="aqua"] {
+  --bgcolor: #00e1ff;
+  --txtcolor: #5a4949;
+}
 body[theme="jmwv4"] {
   --bgcolor: linear-gradient(145deg, #1a1a1a, #080808);
   --txtcolor: yellow;
