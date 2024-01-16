@@ -40,7 +40,7 @@ h1 {
 }
 a {
   font-family: 'Poppins', sans-serif;
-  color: #d4cfcf;
+  color: var(--txtcolor);
   font-size: 20px;
   text-decoration: none;
   text-shadow: 0 0 30px white;
@@ -103,7 +103,7 @@ a.intro:hover {
 .box {
   border-radius: 10px;
   margin: auto;
-  background-color: var(--bgcolor);
+  background-color: white;
   padding: 10px;
   width: 400px;
 }
