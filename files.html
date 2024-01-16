@@ -19,8 +19,10 @@
     <div class="box">
     <input type="text" id="gsearchbar" onkeyup="document.querySelectorAll('#glist>a').forEach(l=>l.style.display=l.textContent.toUpperCase().includes(this.value.toUpperCase().replace(/ /g,''))?'block':'none')" autocomplete="off" spellcheck="false" placeholder="Search" />
     <div id="glist">
+      <h2 class="segregationjoke">Credit to 3kh0!</h2>
       <h1 class="segregationjoke">Popular Games:</h1>
       <hr>
+      <a href="#" style="" onclick="play('/gfiles/ovo/index.html')"></a>
       <a href="gfiles/1v1.lol">1v1.lol</a>
       <a href="gfiles/jfl">JustFall.lol</a>
       <a href="gfiles/subway-surfers">Subway Surfers</a>
@@ -33,12 +35,17 @@
        <a href="gfiles/a-gario">A<span>gar</span>.io lite</a>
        <a href="gfiles/among-us">Among Us</a>
        <a href="gfiles/angry-birds">Angry Birds</a>
+      <a href="gfiles/baldi-basics">Baldi's Basics</a>
+      <a href="gfiles/baldi-basics/camping">Baldi's Basics Camping</a>
        <a href="gfiles/ascii-space">ASCII Space</a>
        <a href="gfiles/chrome-dino">Chrome Dino</a>
-      
-      <a href="gfiles/eagler/1.8">Eaglercraft 1.8.8</a>
+      <a href="gfiles/eagler/1.5.2">Eagler 1.5.2</a>
+      <a href="gfiles/eagler/1.8.8">Eaglercraft 1.8.8</a>
+      <a href="gfiles/fnf">Friday Night Funkin</a>
       <a href="gfiles/geometry-dash">Geometry Dash</a>
       <a href="gfiles/jfl">JustFall.lol</a>
+      <a href="gfiles/nve">Ninja VS Evil Corp</a>
+      <a href="gfiles/snake">Snake Game</a>
       <a href="gfiles/subway-surfers">Subway Surfers</a>
       <h1 class="segregationjoke">Flash Games</h1>
       <hr>
@@ -256,5 +263,30 @@
   </div>
     </div>
     </div>
+  </div>
+  <script>
+    fetch('games.json').then(response => response.json()).then(games => {
+        games.forEach(game => {
+            document.getElementById('games').innerHTML += `<div class="game" data-name="${game[0]}"><div class="item" style="background: url('${game[2]}') 0% 0% / cover;" onclick="play('${game[3]}')"></div><div class="play-button"><i class="fa-solid fa-play"></i></div></div>`;
+        });
+    });
+
+    function search() {
+        var input = document.getElementById("search").value.toLowerCase();
+
+        var games = document.querySelectorAll("#games .game");
+
+        for (var i = 0; i < games.length; i++) {
+          var game = games[i];
+          var name = game.getAttribute("data-name").toLowerCase();
+
+          if (name.indexOf(input) > -1) {
+            game.style.display = "";
+          } else {
+            game.style.display = "none";
+          }
+        }
+    }
+  </script>
 </body>
 </html>
